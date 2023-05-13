@@ -114,17 +114,3 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 }
-//Container(
-//                   padding:
-//                   EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
-//                   decoration: BoxDecoration(
-//                     color: Colors.white,
-//                     borderRadius: BorderRadius.only(
-//                       topRight: Radius.circular(24.r),
-//                       topLeft: Radius.circular(24.r),
-//                     ),
-//                   ),
-//                   child: ListView(
-//                     children: [],
-//                   ),
-//                 )
