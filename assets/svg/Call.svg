@@ -1,0 +1,23 @@
+<svg id="Call" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Shape" d="M.035,12.456,1.217,8.911A6.251,6.251,0,0,1,.668,6.333,6.332,6.332,0,0,1,4.167.671,6.257,6.257,0,0,1,7,0h.37a6.327,6.327,0,0,1,5.963,6v.332a6.246,6.246,0,0,1-.67,2.832A6.332,6.332,0,0,1,7,12.667a6.253,6.253,0,0,1-2.579-.549L.879,13.3a.676.676,0,0,1-.214.035A.668.668,0,0,1,.035,12.456Z" transform="translate(0 0)"/>
+    </clipPath>
+    <filter id="_Icon_Color" x="-48" y="-30" width="136" height="136" filterUnits="userSpaceOnUse">
+      <feOffset dy="18" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Oval" d="M20,0A20,20,0,1,1,0,20,20,20,0,0,1,20,0Z" fill="#0e60be"/>
+  <g id="Icon_message-circle" data-name="Icon / message-circle" transform="translate(13.333 13.333)">
+    <path id="Shape-2" data-name="Shape" d="M.035,12.456,1.217,8.911A6.251,6.251,0,0,1,.668,6.333,6.332,6.332,0,0,1,4.167.671,6.257,6.257,0,0,1,7,0h.37a6.327,6.327,0,0,1,5.963,6v.332a6.246,6.246,0,0,1-.67,2.832A6.332,6.332,0,0,1,7,12.667a6.253,6.253,0,0,1-2.579-.549L.879,13.3a.676.676,0,0,1-.214.035A.668.668,0,0,1,.035,12.456Z" transform="translate(0 0)"/>
+    <g id="Icon_message-circle-2" data-name="Icon / message-circle" clip-path="url(#clip-path)">
+      <g transform="matrix(1, 0, 0, 1, -13.33, -13.33)" filter="url(#_Icon_Color)">
+        <rect id="_Icon_Color-2" data-name="↳ Icon Color" width="16" height="16" transform="translate(12 12)" fill="#fafafa"/>
+      </g>
+    </g>
+  </g>
+</svg>
