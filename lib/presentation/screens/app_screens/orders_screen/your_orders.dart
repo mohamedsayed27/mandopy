@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mandopy/core/app_router/screens_name.dart';
 import 'package:mandopy/presentation/widgets/shared_widgets/custom_back_button.dart';
 
 import '../../../../core/app_theme/app_colors.dart';
@@ -72,7 +73,12 @@ class YourOrders extends StatelessWidget {
                       SizedBox(
                         height: 12.h,
                       ),
-                      const InProgressOrderContainer(),
+                      InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(
+                                context, ScreenName.orderStatusScreen);
+                          },
+                          child: const InProgressOrderContainer()),
                       SizedBox(
                         height: 20.h,
                       ),
@@ -87,7 +93,12 @@ class YourOrders extends StatelessWidget {
                       SizedBox(
                         height: 12.h,
                       ),
-                      const FinishedOrdersContainer(),
+                      InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(
+                                context, ScreenName.orderStatusScreen);
+                          },
+                          child: const FinishedOrdersContainer()),
                     ],
                   ),
                 ),

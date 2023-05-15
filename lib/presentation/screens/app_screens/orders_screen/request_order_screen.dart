@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mandopy/core/app_router/screens_name.dart';
 import 'package:mandopy/core/assets_path/fonts_path.dart';
 import 'package:mandopy/core/constants/app_strings.dart';
 
@@ -159,7 +160,9 @@ class _RequestOrderScreenState extends State<RequestOrderScreen> {
                         ),
                         CustomElevatedButton(
                           buttonTitle: AppStrings.addOrder,
-                          isTapped: () {},
+                          isTapped: () {
+                            Navigator.pushNamed(context, ScreenName.payScreen);
+                          },
                           width: double.infinity,
                           height: 50.h,
                           fontSize: 14,

@@ -8,6 +8,10 @@ class ScreenName{
   static const requestOrderScreen = 'request_order_screen';
   static const comingOrdersScreen = 'coming_order_screen';
   static const chatScreen = 'chat_screen';
+  static const watchYourOrders = 'your_orders_screen';
+  static const orderStatusScreen = 'order_status_screen';
+  static const payScreen = 'pay_screen';
+  static const subscriptionScreen = 'subscription_screen';
   // static const requestOrderScreen = 'chat_screen';
 
 }

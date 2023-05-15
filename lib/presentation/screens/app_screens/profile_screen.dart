@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:mandopy/core/app_router/screens_name.dart';
 import 'package:mandopy/core/assets_path/images_path.dart';
 import 'package:mandopy/core/assets_path/svg_path.dart';
 import 'package:mandopy/core/constants/app_strings.dart';
@@ -17,6 +18,7 @@ class ProfileScreen extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: SafeArea(
         child: Scaffold(
+          backgroundColor: Colors.white,
           body: Stack(
             children: [
               Container(
@@ -126,34 +128,40 @@ class ProfileScreen extends StatelessWidget {
                       child: ListView(
                         children: [
                           buildProfileDataItem(
-                              svgPath: SvgPath.settings,
-                              title: "اعدادت الحساب",
-                              onTap: () {}),
+                            svgPath: SvgPath.settings,
+                            title: "اعدادت الحساب",
+                            onTap: () {},
+                          ),
                           const Divider(),
                           buildProfileDataItem(
-                              svgPath: SvgPath.lock,
-                              title: "تغيير كلمة السر",
-                              onTap: () {}),
+                            svgPath: SvgPath.lock,
+                            title: "تغيير كلمة السر",
+                            onTap: () {},
+                          ),
                           const Divider(),
                           buildProfileDataItem(
-                              svgPath: SvgPath.couponCodes,
-                              title: "اكواد الخصم",
-                              onTap: () {}),
+                            svgPath: SvgPath.couponCodes,
+                            title: "اكواد الخصم",
+                            onTap: () {},
+                          ),
                           const Divider(),
                           buildProfileDataItem(
-                              svgPath: SvgPath.like,
-                              title: "الأسئلة الشائعة",
-                              onTap: () {}),
+                            svgPath: SvgPath.like,
+                            title: "الأسئلة الشائعة",
+                            onTap: () {},
+                          ),
                           const Divider(),
                           buildProfileDataItem(
-                              svgPath: SvgPath.phoneProfile,
-                              title: "تواصل معنا",
-                              onTap: () {}),
+                            svgPath: SvgPath.phoneProfile,
+                            title: "تواصل معنا",
+                            onTap: () {},
+                          ),
                           const Divider(),
                           buildProfileDataItem(
-                              svgPath: SvgPath.motorcycle,
-                              title: "رحلاتك",
-                              onTap: () {}),
+                            svgPath: SvgPath.motorcycle,
+                            title: "رحلاتك",
+                            onTap: () {},
+                          ),
                           const Divider(),
                           buildProfileDataItem(
                             svgPath: SvgPath.coins,
@@ -163,9 +171,12 @@ class ProfileScreen extends StatelessWidget {
                           ),
                           const Divider(),
                           buildProfileDataItem(
-                              svgPath: SvgPath.bxsCoupon,
-                              title: "الإشتراكات",
-                              onTap: () {}),
+                            svgPath: SvgPath.bxsCoupon,
+                            title: "الإشتراكات",
+                            onTap: () {
+                              Navigator.pushNamed(context, ScreenName.subscriptionScreen);
+                            },
+                          ),
                         ],
                       ),
                     ),

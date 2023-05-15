@@ -9,7 +9,11 @@ import 'package:mandopy/presentation/screens/intro_screens/splash_screen.dart';
 import '../../presentation/screens/app_screens/chat_screen.dart';
 import '../../presentation/screens/app_screens/main_layout_screen.dart';
 import '../../presentation/screens/app_screens/orders_screen/comming_orders_screen.dart';
+import '../../presentation/screens/app_screens/orders_screen/order_status_screen.dart';
+import '../../presentation/screens/app_screens/orders_screen/pay_screen.dart';
 import '../../presentation/screens/app_screens/orders_screen/request_order_screen.dart';
+import '../../presentation/screens/app_screens/orders_screen/your_orders.dart';
+import '../../presentation/screens/app_screens/profile_screens/susc_screens.dart';
 import '../../presentation/screens/auth_screens/choose_login_type.dart';
 
 class AppRouter {
@@ -28,10 +32,18 @@ class AppRouter {
           return SlideRightRoute(page: const LoginScreen());
         case ScreenName.requestOrderScreen:
           return SlideRightRoute(page: const RequestOrderScreen());
+        case ScreenName.subscriptionScreen:
+          return SlideRightRoute(page: const SubscriptionScreen());
         case ScreenName.comingOrdersScreen:
           return SlideRightRoute(page: const ComingOrdersScreen());
         case ScreenName.chatScreen:
           return SlideRightRoute(page: const ChatScreen());
+        case ScreenName.watchYourOrders:
+          return SlideRightRoute(page: const YourOrders());
+        case ScreenName.orderStatusScreen:
+          return SlideRightRoute(page: const OrderStatusScreen());
+        case ScreenName.payScreen:
+          return SlideRightRoute(page: const PayScreen());
         default:
           return _errorRoute();
       }

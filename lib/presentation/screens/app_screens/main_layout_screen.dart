@@ -9,6 +9,7 @@ import 'package:mandopy/presentation/screens/app_screens/profile_screen.dart';
 import 'messages_screen.dart';
 import 'home_screen.dart';
 import 'my_work_screen.dart';
+import 'orders_screen/comming_orders_screen.dart';
 
 class MainLayoutScreen extends StatefulWidget {
   const MainLayoutScreen({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class MainLayoutScreen extends StatefulWidget {
 class _MainLayoutScreenState extends State<MainLayoutScreen> {
   List<Widget> screens = const [
     HomeScreen(),
-    MyWorkScreen(),
+    ComingOrdersScreen(),
     MessagesScreen(),
     ProfileScreen(),
   ];

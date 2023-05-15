@@ -78,6 +78,9 @@ class HomeScreen extends StatelessWidget {
               CustomHomeContainer(
                 title: AppStrings.trackYourOrder,
                 imagePath: ImagesPath.van,
+                onTap: (){
+                  Navigator.pushNamed(context, ScreenName.watchYourOrders);
+                },
                 imageWidth: 112.29.w,
                 imageHeight: 95.01.h,
               ),
@@ -87,7 +90,7 @@ class HomeScreen extends StatelessWidget {
               CustomElevatedButton(
                 buttonTitle: AppStrings.orderAnythingService,
                 isTapped: () {
-                  Navigator.pushNamed(context, ScreenName.comingOrdersScreen);
+
 
                 },
                 width: double.infinity,
