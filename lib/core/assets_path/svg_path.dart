@@ -14,6 +14,14 @@ class SvgPath{
   static const coins ='assets/svg/coins.svg';
   static const time ='assets/svg/time.svg';
   static const notification ='assets/svg/notification.svg';
+  static const settings ='assets/svg/Icon.svg';
+  static const lock = 'assets/svg/Icon-1.svg';
+  static const couponCodes = 'assets/svg/Icon-2.svg';
+  static const like = 'assets/svg/Icon-3.svg';
+  static const phoneProfile = 'assets/svg/Icon-4.svg';
+  static const motorcycle = 'assets/svg/motorcycle.svg';
+  static const dollar = 'assets/svg/dollar.svg';
+  static const bxsCoupon = 'assets/svg/bxs-coupon.svg';
 
   SvgPath._();
 }

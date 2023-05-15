@@ -14,6 +14,7 @@ class ImagesPath {
   static const carousel3 = 'assets/images/carousel3.png';
   static const deliveryBikeBackground = 'assets/images/deliveryBike.jpg';
   static const deliveryBike2 = 'assets/images/deliveryBike2.png';
+  static const subsImage = 'assets/images/subsImage.png';
   // static const balls = 'assets/images/balls.png';
   // static const anonymous = 'assets/images/anonymous.jpeg';
 

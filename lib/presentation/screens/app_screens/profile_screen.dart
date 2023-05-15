@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:mandopy/core/assets_path/images_path.dart';
+import 'package:mandopy/core/assets_path/svg_path.dart';
 import 'package:mandopy/core/constants/app_strings.dart';
 
 import '../../../core/app_theme/app_colors.dart';
@@ -20,7 +22,7 @@ class ProfileScreen extends StatelessWidget {
               Container(
                 height: 260.h,
                 width: double.infinity,
-                padding: EdgeInsets.symmetric(horizontal: 25.w,vertical: 10.h),
+                padding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 10.h),
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     colors: [Color(0xff0E60BE), Color(0xff0499EB)],
@@ -34,7 +36,16 @@ class ProfileScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        SizedBox(height: 25.w,width: 8.w,child: IconButton(onPressed: (){}, icon: Icon(Icons.more_vert_rounded,color: Colors.white,)),),
+                        SizedBox(
+                          height: 25.w,
+                          width: 8.w,
+                          child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.more_vert_rounded,
+                                color: Colors.white,
+                              )),
+                        ),
                         Text(
                           AppStrings.profile,
                           textAlign: TextAlign.center,
@@ -44,20 +55,30 @@ class ProfileScreen extends StatelessWidget {
                             color: AppColors.whiteColor,
                           ),
                         ),
-                        SizedBox(height: 25.w,width: 8.w,)
+                        SizedBox(
+                          height: 25.w,
+                          width: 8.w,
+                        )
                       ],
                     ),
-                    SizedBox(height: 10.h,),
+                    SizedBox(
+                      height: 10.h,
+                    ),
                     Center(
                       child: Container(
                         height: 96.h,
                         width: 96.w,
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         decoration: const BoxDecoration(shape: BoxShape.circle),
-                        child: Image.asset(ImagesPath.carousel2,fit: BoxFit.cover,),
+                        child: Image.asset(
+                          ImagesPath.carousel2,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
-                    SizedBox(height: 10.h,),
+                    SizedBox(
+                      height: 10.h,
+                    ),
                     Text(
                       'Kitani Sarapova',
                       textAlign: TextAlign.center,
@@ -68,7 +89,9 @@ class ProfileScreen extends StatelessWidget {
                         color: AppColors.whiteColor,
                       ),
                     ),
-                    SizedBox(height: 5.h,),
+                    SizedBox(
+                      height: 5.h,
+                    ),
                     Text(
                       'sarapova.kitani@gmail.com',
                       textAlign: TextAlign.center,
@@ -101,7 +124,49 @@ class ProfileScreen extends StatelessWidget {
                         ),
                       ),
                       child: ListView(
-                        children: [],
+                        children: [
+                          buildProfileDataItem(
+                              svgPath: SvgPath.settings,
+                              title: "اعدادت الحساب",
+                              onTap: () {}),
+                          const Divider(),
+                          buildProfileDataItem(
+                              svgPath: SvgPath.lock,
+                              title: "تغيير كلمة السر",
+                              onTap: () {}),
+                          const Divider(),
+                          buildProfileDataItem(
+                              svgPath: SvgPath.couponCodes,
+                              title: "اكواد الخصم",
+                              onTap: () {}),
+                          const Divider(),
+                          buildProfileDataItem(
+                              svgPath: SvgPath.like,
+                              title: "الأسئلة الشائعة",
+                              onTap: () {}),
+                          const Divider(),
+                          buildProfileDataItem(
+                              svgPath: SvgPath.phoneProfile,
+                              title: "تواصل معنا",
+                              onTap: () {}),
+                          const Divider(),
+                          buildProfileDataItem(
+                              svgPath: SvgPath.motorcycle,
+                              title: "رحلاتك",
+                              onTap: () {}),
+                          const Divider(),
+                          buildProfileDataItem(
+                            svgPath: SvgPath.coins,
+                            title: "الدفع",
+                            onTap: () {},
+                            color: AppColors.primaryColor,
+                          ),
+                          const Divider(),
+                          buildProfileDataItem(
+                              svgPath: SvgPath.bxsCoupon,
+                              title: "الإشتراكات",
+                              onTap: () {}),
+                        ],
                       ),
                     ),
                   )
@@ -111,6 +176,35 @@ class ProfileScreen extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  Widget buildProfileDataItem(
+      {required String svgPath,
+      required String title,
+      required void Function() onTap,
+      Color? color}) {
+    return ListTile(
+      leading: SvgPicture.asset(
+        svgPath,
+        width: 23.w,
+        height: 23.h,
+        colorFilter:
+            color != null ? ColorFilter.mode(color, BlendMode.srcIn) : null,
+      ),
+      title: Text(
+        title,
+        style: TextStyle(
+            fontFamily: FontsPath.tajawalBold,
+            color: Colors.black,
+            fontSize: 16.sp),
+      ),
+      trailing: Icon(
+        Icons.arrow_forward_ios_rounded,
+        color: const Color(0xff464646),
+        size: 20.r,
+      ),
+      onTap: onTap,
     );
   }
 }

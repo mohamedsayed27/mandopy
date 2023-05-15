@@ -7,5 +7,7 @@ class ScreenName{
   static const registerScreen = 'register_screen';
   static const requestOrderScreen = 'request_order_screen';
   static const comingOrdersScreen = 'coming_order_screen';
+  static const chatScreen = 'chat_screen';
+  // static const requestOrderScreen = 'chat_screen';
 
 }

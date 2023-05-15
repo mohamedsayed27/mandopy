@@ -6,7 +6,7 @@ import 'package:mandopy/core/assets_path/images_path.dart';
 import 'package:mandopy/core/assets_path/svg_path.dart';
 import 'package:mandopy/presentation/screens/app_screens/profile_screen.dart';
 
-import 'chat_screen.dart';
+import 'messages_screen.dart';
 import 'home_screen.dart';
 import 'my_work_screen.dart';
 
@@ -21,7 +21,7 @@ class _MainLayoutScreenState extends State<MainLayoutScreen> {
   List<Widget> screens = const [
     HomeScreen(),
     MyWorkScreen(),
-    ChatScreen(),
+    MessagesScreen(),
     ProfileScreen(),
   ];
   int currentIndex = 0;

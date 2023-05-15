@@ -86,7 +86,10 @@ class HomeScreen extends StatelessWidget {
               ),
               CustomElevatedButton(
                 buttonTitle: AppStrings.orderAnythingService,
-                isTapped: () {},
+                isTapped: () {
+                  Navigator.pushNamed(context, ScreenName.comingOrdersScreen);
+
+                },
                 width: double.infinity,
                 height: 40.h,
                 fontSize: 14,
